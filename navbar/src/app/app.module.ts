@@ -15,19 +15,19 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ServicesComponent } from './services/services.component';
 import { CoursesComponent } from './courses/courses.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import {
-  AngularFireDatabase,
-  AngularFireList,
-  AngularFireObject,
-} from '@angular/fire/compat/database';
-import {Injectable} from  '@angular/core';
-import {
-  HttpClient,
-  HttpRequest,
-  HttpEvent,
-  HttpEventType
-} from '@angular/common/http';
+// import { ReactiveFormsModule } from '@angular/forms';
+// import {
+//   AngularFireDatabase,
+//   AngularFireList,
+//   AngularFireObject,
+// } from '@angular/fire/compat/database';
+// import {Injectable} from  '@angular/core';
+// import {
+//   HttpClient,
+//   HttpRequest,
+//   HttpEvent,
+//   HttpEventType
+// } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,22 +47,22 @@ import {
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    ReactiveFormsModule,
-    Injectable,
-    HttpClient,
-    HttpRequest,
+    // ReactiveFormsModule,
+    // Injectable,
+    // HttpClient,
+    // HttpRequest,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-const firebaseConfig = {
-  apiKey: "AIzaSyCs_6VnTVhCX6PMmoeO-BYpp8qeslm3ePE",
-  authDomain: "sample-db-badb4.firebaseapp.com",
-  databaseURL: "https://sample-db-badb4-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "sample-db-badb4",
-  storageBucket: "sample-db-badb4.appspot.com",
-  messagingSenderId: "440770667428",
-  appId: "1:440770667428:web:24401e9ae7e114c5429731"
-};
-const app = initializeApp(firebaseConfig);
+// const firebaseConfig = {
+//   apiKey: "AIzaSyCs_6VnTVhCX6PMmoeO-BYpp8qeslm3ePE",
+//   authDomain: "sample-db-badb4.firebaseapp.com",
+//   databaseURL: "https://sample-db-badb4-default-rtdb.europe-west1.firebasedatabase.app",
+//   projectId: "sample-db-badb4",
+//   storageBucket: "sample-db-badb4.appspot.com",
+//   messagingSenderId: "440770667428",
+//   appId: "1:440770667428:web:24401e9ae7e114c5429731"
+// };
+// const app = initializeApp(firebaseConfig);

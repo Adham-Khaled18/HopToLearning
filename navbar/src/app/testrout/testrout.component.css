@@ -256,6 +256,55 @@
   margin-left: -100%;
 }
 
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+
+.navigation-auto div{
+  border: 2px solid coral;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: coral;
+}
+
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: coral;
+}
+
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: coral;
+}
+
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: coral;
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn5{
+  background: coral;
+}
+
+#radio6:checked ~ .navigation-auto .auto-btn6{
+  background: coral;
+}
+
 .container3 {
   border-width: 0px;
   position: relative;
