@@ -1,0 +1,198 @@
+body {
+  background-color: rgba(31, 29, 54, 1);
+
+
+}
+
+/* makan el search */
+.first1 {
+  text-align: center;
+
+}
+
+
+/* ####################### */
+.second1 {
+
+  border-radius: 9px;
+  left: 0px;
+  top: 0px;
+  width: 300px;
+  height: 30px;
+  padding: 2px;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 13px;
+  letter-spacing: normal;
+  text-align: center;
+  text-transform: none;
+  background-color: rgba(128, 47, 123, 0.493);
+  border-color: transparent;
+}
+
+.img.r {
+  height: 300;
+  width: 300;
+
+}
+
+
+
+.second {
+  font-style: italic;
+  color: rgb(236, 128, 141);
+  font-size: 20px;
+}
+
+
+
+span {
+  scrollbar-highlight-color: darkgoldenrod;
+
+}
+
+.first {
+  font-style: italic;
+  font-size: 28px;
+  color: rgb(236, 128, 141);
+  text-align: center;
+}
+
+div.gallery {
+  border: 1px solid #ccc;
+  padding: 2px 0px;
+  background-color: rgb(215, 215, 215);
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+  /* max-height:20%; */
+}
+
+div.desc {
+  padding: 10px;
+  text-align: left;
+}
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  margin-left: auto;
+  margin-right: auto;
+  margin: 20px 40px;
+  /* padding: 2px 20px; */
+  float: left;
+  width: 300px;
+
+
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.picture {
+  background-color: #3F3351;
+}
+
+
+
+
+footer {
+  /*footer styling */
+  background: rgb(55, 45, 70);
+  height: auto;
+  width: 100%;
+  font-family: "Montserrat";
+  padding-top: 40px;
+  color: rgb(233, 166, 166);
+}
+
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+.footer-content h3 {
+  font: 1.8rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+
+.socials li {
+  margin: 0 10px;
+}
+
+.socials li i {
+  font-size: 1.1rem;
+  transition: color 0.4s ease;
+  cursor: pointer;
+}
+
+.socials #face:hover i {
+  color: rgb(82, 132, 231);
+}
+
+.socials #twit:hover i {
+  color: rgb(10, 223, 223);
+}
+
+.socials #yt:hover i {
+  color: red;
+}
+
+.socials #insta:hover i {
+  color: rgb(218, 72, 120);
+}
+
+.socials #linked:hover i {
+  color: whitesmoke;
+}

@@ -1,0 +1,223 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+   
+}
+body{
+    background:#1f1d36;
+    height: 100%;
+
+}
+.container{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background:#1f1d36;
+}
+.card{
+    background: white;
+    width:290px;
+    margin: 10px;
+    border-radius: 15px;
+}
+.card-image{
+   
+    height: 170px;
+    margin-bottom: 15px;
+    background-repeat: no-repeat;
+    background-size: 290px;
+    border-radius: 15px 15px 0 0;
+}
+.car-1{
+    background-image: url('../../assets/img/service.jpg');
+}
+.car-2{
+    background-image: url('../../assets/img/service.jpg');}
+.car-3{
+    background-image: url('../../assets/img/service.jpg');}
+.car-4{
+    background-image: url('../../assets/img/service.jpg');}
+.car-5{
+    background-image: url('../../assets/img/service.jpg');}
+.car-6{
+    background-image: url('../../assets/img/service.jpg');}
+.car-7{
+    background-image: url('../../assets/img/service.jpg');}
+.car-8{
+    background-image: url('../../assets/img/service.jpg');}
+.car-9{
+    background-image: url('../../assets/img/service.jpg');}
+.car-10{
+    background-image: url('../../assets/img/service.jpg');}
+.car-11{
+    background-image: url('../../assets/img/service.jpg');}
+.car-12{
+    background-image: url('../../assets/img/service.jpg');}
+.card p{
+    padding: 10px;
+}
+
+.btn{
+    border: 3px solid #4E78f4;
+    background: none;
+    padding: 10px 30px;
+    font-size:20px;
+    font-family: "Montserrat";
+    cursor: pointer;
+    margin: 10px 50px;
+    border-radius: 90px;
+
+    background-color:#EFEFEF
+}
+.btn1{
+    color: #4E78f4;
+}
+.btn1:hover{
+   background-color: #fff;
+}
+
+.btn2{
+    color: #4E78f4;
+}
+.btn2:hover{
+   background-color: #fff;
+}
+.btn3{
+    color: #4E78f4;
+}
+.btn3:hover{
+   background-color: #fff;
+}
+.btn4{
+    color: #4E78f4;
+}
+.btn4:hover{
+   background-color: #fff;
+}
+.btn5{
+    color: #4E78f4;
+}
+.btn5:hover{
+   background-color: #fff;
+}
+.btn6{
+    color: #4E78f4;
+    
+}
+.btn6:hover{
+   background-color: #fff;
+}
+.btn7{
+    color: #4E78f4;
+}
+.btn7:hover{
+   background-color: #fff;
+}
+.btn8{
+    color: #4E78f4;
+}
+.btn8:hover{
+   background-color: #fff;
+}
+.btn9{
+    color: #4E78f4;
+}
+.btn9:hover{
+   background-color: #fff;
+}
+.btn10{
+    color: #4E78f4;
+}
+.btn10:hover{
+   background-color: #fff;
+}
+.btn11{
+    color: #4E78f4;
+}
+.btn11:hover{
+   background-color: #fff;
+}
+.btn12{
+    color: #4E78f4;
+}
+.btn12:hover{
+   background-color: #fff;
+}
+.card:hover{
+    background-color: #C280FF;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all .3s ease;
+}
+
+footer {
+    /*footer styling */
+    background: rgb(55, 45, 70);
+    height: auto;
+    width: 100%;
+    font-family: "Montserrat";
+    padding-top: 40px;
+    color: rgb(233, 166, 166);
+  }
+  
+  
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  
+  .footer-content h3 {
+    font: 1.8rem;
+    font-weight: 400;
+    line-height: 3rem;
+  }
+  
+  .footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+  }
+  
+  .socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+  }
+  
+  .socials li {
+    margin: 0 10px;
+  }
+  
+  .socials li i {
+    font-size: 1.1rem;
+    transition: color 0.4s ease;
+    cursor: pointer;
+  }
+  
+  .socials #face:hover i {
+    color: rgb(82, 132, 231);
+  }
+  
+  .socials #twit:hover i {
+    color: rgb(10, 223, 223);
+  }
+  
+  .socials #yt:hover i {
+    color: red;
+  }
+  
+  .socials #insta:hover i {
+    color: rgb(218, 72, 120);
+  }
+  
+  .socials #linked:hover i {
+    color: whitesmoke;
+  }

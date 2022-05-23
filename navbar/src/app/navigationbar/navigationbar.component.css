@@ -1,0 +1,23 @@
+.spacer{
+    flex: 1 1 auto;
+}
+p{
+    margin-top: 15px;
+}
+p:hover{
+    color: #EC808D;
+}
+
+.mat-elevation-z4 span{
+    cursor: pointer;
+    font-family: 'Edwardian Script ITC Bold', 'Edwardian Script ITC Regular', 'Edwardian Script ITC', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 37px;
+    color: #ec8888;
+}
+
+.mat-elevation-z4 mat-icon{
+    cursor: pointer;
+    margin-right: 5px;
+}

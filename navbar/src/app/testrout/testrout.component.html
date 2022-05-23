@@ -1,0 +1,148 @@
+<div class="container">
+    <div>
+        <button (click)="goToPage('signup')">Sign Up</button>
+
+    </div>
+</div>
+
+<div id="a1">
+    <p><span>Distance Learning Made Easy</span></p>
+</div>
+
+<div id="a2">
+    <p> Unlock<br><br>
+        Possiblities
+    </p>
+</div>
+
+<div id="a3" class="Header">
+    <p><span>We believe everyone has the capacity to be creative,HoptToLearning is&nbsp;a place where people develop
+            their own potential</span></p>
+</div>
+
+<div id="u12">
+    <img src="assets/img/home-img.jpg">
+</div>
+
+
+<div id="sphere1">
+    <i class="fa fa-circle fa-4x"></i>
+</div>
+
+<div class="container2">
+    <button (click)="goToPage('courses')">See all courses</button>
+    <div id="u28">
+        <p><span>Courses</span></p>
+    </div>
+    <div id="u29">
+        <p>Our most <br><br>popular courses</p>
+    </div>
+    <div class="courseSlider">
+        <div class="slides">
+
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <input type="radio" name="radio-btn" id="radio5">
+            <input type="radio" name="radio-btn" id="radio6">
+
+            <div class="slide first">
+                <img src="assets/img/AI.jpg" alt="img1">
+            </div>
+
+            <div class="slide">
+                <img src="assets/img/Algo-img.png" alt="img2">
+            </div>
+
+            <div class="slide">
+                <img src="assets/img/Datastruct-img.jpg" alt="img3">
+            </div>
+
+            <div class="slide">
+                <img src="assets/img/DBMS-img.jpg" alt="img4">
+            </div>
+
+            <div class="slide">
+                <img src="assets/img/HCI-img.jpg" alt="img5">
+            </div>
+
+            <div class="slide">
+                <img src="assets/img/Python-img.jpg" alt="img6">
+            </div>
+
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
+                <div class="auto-btn6"></div>
+            </div>
+        </div>
+
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+            <label for="radio5" class="manual-btn"></label>
+            <label for="radio6" class="manual-btn"></label>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container3">
+    <div id="u31">
+        <p><span>Testimonials</span></p>
+    </div>
+
+    <div id="u32">
+        <p>What our students say </p>
+    </div>
+    <div id="u33">
+        <p>about us</p>
+    </div>
+    <div class="slider">
+        <div class="box">
+            <div id="slide" #slide>
+                <div class="cards" *ngFor="let slide of slideArray">
+                    <div class="profile">
+                        <img src="{{slide.img}}" alt="Image">
+                    </div>
+                    <div class="name">
+                        <h2>{{slide.name}}</h2>
+                        <p>{{slide.date}}</p>
+                    </div>
+                    <div class="content">
+                        <p>{{slide.content}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btns" (click)="back()">Back</button>
+        <button type="button" class="btns" (click)="next()">Next</button>
+    </div>
+</div>
+<div class="container4"></div>
+
+
+
+<footer>
+    <div class="footer-content">
+        <h3>Hop To Learning</h3>
+        <p>Follow us on our socials for more information about us </p>
+        <u class="socials">
+            <li id="face"><i class="fa fa-facebook-official" aria-hidden="true"></i></li>
+            <li id="twit"><i class="fa fa-twitter" aria-hidden="true"></i></li>
+            <li id="yt"><i class="fa fa-youtube-play" aria-hidden="true"></i></li>
+            <li id="insta"><i class="fa fa-instagram" aria-hidden="true"></i></li>
+            <li id="linked"><i class="fa fa-linkedin" aria-hidden="true"></i></li>
+        </u>
+        <div class="footer-bottom">
+            <p>Copyright &copy;2022 Hop To Learning Designed By <span>Adham,Hazem,Ibrahim,AbdElRahman</span></p>
+        </div>
+    </div>
+</footer>
