@@ -7,12 +7,26 @@
     <img id="bub5" src="assets/img/bub5.png" alt="img5">
 </div>
 <h1>Hop To Learning</h1>
-<form class="box" action="index.html" method="post" name="inputForm">
-    <input type="text" name="text" placeholder="Username" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <input type="password" name="password" placeholder="Password" required>
-    <input type="password" name="password" placeholder="Confirm Password" required>
-    <input type="submit" name="" value="Sign Up">  
-    <p>Have An Account? <a (click)="goToPage('login')"> Login</a> </p>
+<form class="box"  [formGroup]="registerForm" (ngSubmit)="submitData()">
+    <input type="text" formControlName="name" placeholder="Username">
+    <div *ngIf="name.invalid && (name.touched || name.dirty)">
+        <span class="error" *ngIf="name.errors?.required">*Username is required</span>
+        <span class="error" *ngIf="name.errors?.pattern">*Enter Letters Only</span>
+    </div>
+    <input type="email" formControlName="emailId" placeholder="E-mail">
+    <div *ngIf="emailId.invalid && (emailId.touched)">
+        <span class="error" *ngIf="emailId.errors?.required">*e-mail required</span>
+        <span class="error" *ngIf="emailId.errors?.email">*Enter valid e-mail</span>
+    </div>
+    <input type="password" formControlName="password" placeholder="Password">
+    <div *ngIf="password.invalid && (password.touched)">
+        <span class="error" *ngIf="password.errors?.required">*Password required</span>
+        <span class="error" *ngIf="password.errors?.minLength">*Password should be at lesast 8 character</span>
+    </div>
+    <input type="password" formControlName="passwordC" placeholder="Confirm Password">
+    <div *ngIf="passwordC.invalid && (passwordC.touched)">
+        <span class="error" *ngIf="passwordC.errors?.required">*Password required</span>
+        <span class="error" *ngIf="passwordC.errors?.minLength">*Password should be at lesast 8 character</span>
+    </div>
+    <button class="btn" [disabled]="registerForm.invalid"> Sign Up </button>
 </form>
-

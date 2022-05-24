@@ -78,6 +78,10 @@
     border-radius: 25px;
 }
 
+.error{
+    color: red;
+}
+
 
  h1{                                   /* sign up title*/
     font-family: 'Edwardian Script ITC Bold', 'Edwardian Script ITC Regular', 'Edwardian Script ITC', sans-serif;
@@ -115,7 +119,7 @@
 }
 
 
-.box input[type = "submit"]{                                 /*button styling*/   
+.btn{                                 /*button styling*/   
     border: 0;
     background: none;
     display: block;
@@ -132,31 +136,16 @@
     width: 100px;
 }
 
- 
-.box input[type = "submit"]:hover{                        /*button styling hover*/
+.btn:hover{                        /*button styling hover*/
     background: rgb(96, 46, 114);
 }
 
-.box p {
+.btn p {
     color: grey;
 }
-.box a{
+.btn a{
     cursor: pointer;
 }
-.box a:hover{
+.btn a:hover{
     color: aquamarine;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
