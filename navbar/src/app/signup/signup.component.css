@@ -140,12 +140,12 @@
     background: rgb(96, 46, 114);
 }
 
-.btn p {
+.box p {
     color: grey;
 }
-.btn a{
+.box a{
     cursor: pointer;
 }
-.btn a:hover{
+.box a:hover{
     color: aquamarine;
 }

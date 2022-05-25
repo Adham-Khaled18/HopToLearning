@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { initializeApp } from "firebase/app";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,23 +12,15 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
-import { ServicesComponent } from './services/services.component';
 import { CoursesComponent } from './courses/courses.component';
 import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
-import { environment } from 'src/environments/environment';
+import { SerPageComponent } from './ser-page/ser-page.component';
+import { HotToastModule } from '@ngneat/hot-toast';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
 
-// import {
-//   AngularFireDatabase,
-//   AngularFireList,
-//   AngularFireObject,
-// } from '@angular/fire/compat/database';
-// import {Injectable} from  '@angular/core';
-// import {
-//   HttpClient,
-//   HttpRequest,
-//   HttpEvent,
-//   HttpEventType
-// } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,10 +30,11 @@ import { environment } from 'src/environments/environment';
     SignupComponent,
     ContactusComponent,
     AboutusComponent,
-    ServicesComponent,
     CoursesComponent,
+    SerPageComponent,
   ],
   imports: [
+    
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -52,9 +44,10 @@ import { environment } from 'src/environments/environment';
     ReactiveFormsModule,
     FormsModule,
     ReactiveFormsModule,
-    // Injectable,
-    // HttpClient,
-    // HttpRequest,
+    HotToastModule.forRoot(),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+
   ],
   providers: [],
   bootstrap: [AppComponent]

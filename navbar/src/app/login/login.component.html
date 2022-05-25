@@ -8,10 +8,17 @@
     <img id="bub5" src="assets/img/bub5.png" alt="img5">
 </div>
 
-<form class="box" action="index.html" method="post" name="inputForm">
+<form class="box"  [formGroup]="loginForm" (ngSubmit)="submit()" >
     <h1>Hop To Learning</h1>
-    <input type="email" name="email" placeholder="Email" required>
-    <input type="password" name="password" placeholder="Password" required>
-    <input type="submit" name="" value="LOG IN"> <!-- (click)="goToPage('Home')">  -->
+    <input type="email"  formControlName="email" placeholder="E-mail">
+    <div *ngIf="email.invalid && (email.touched)">
+        <span class="error" *ngIf="email.errors?.['required']">*e-mail required</span>
+        <span class="error" *ngIf="email.errors?.['email']">*Enter valid e-mail</span>
+    </div>
+    <input type="password" formControlName ="password" name="password" placeholder="Password">
+    <div *ngIf="password.invalid && (password.touched)">
+        <span class="error" *ngIf="password.errors?.['required']">*Password required</span>
+    </div>
+    <button class="btn"> Login</button><!-- (click)="goToPage('Home')">  -->
     <p>Don't have an account? <a (click)="goToPage('signup')">Sign Up</a></p>
 </form>

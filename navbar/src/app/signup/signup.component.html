@@ -13,12 +13,12 @@
         <span class="error" *ngIf="name.errors?.required">*Username is required</span>
         <span class="error" *ngIf="name.errors?.pattern">*Enter Letters Only</span>
     </div>
-    <input type="email" formControlName="emailId" placeholder="E-mail">
+    <input type="text" #emailSignup formControlName="emailId" placeholder="E-mail">
     <div *ngIf="emailId.invalid && (emailId.touched)">
         <span class="error" *ngIf="emailId.errors?.required">*e-mail required</span>
         <span class="error" *ngIf="emailId.errors?.email">*Enter valid e-mail</span>
     </div>
-    <input type="password" formControlName="password" placeholder="Password">
+    <input type="password" #passwordSignup formControlName="password" placeholder="Password">
     <div *ngIf="password.invalid && (password.touched)">
         <span class="error" *ngIf="password.errors?.required">*Password required</span>
         <span class="error" *ngIf="password.errors?.minLength">*Password should be at lesast 8 character</span>
@@ -28,5 +28,6 @@
         <span class="error" *ngIf="passwordC.errors?.required">*Password required</span>
         <span class="error" *ngIf="passwordC.errors?.minLength">*Password should be at lesast 8 character</span>
     </div>
-    <button class="btn" [disabled]="registerForm.invalid"> Sign Up </button>
+    <button class="btn" [disabled]="registerForm.invalid" > Sign Up </button>
+    <p>Have An Account? <a (click)="goToPage('login')"> Login</a> </p>
 </form>

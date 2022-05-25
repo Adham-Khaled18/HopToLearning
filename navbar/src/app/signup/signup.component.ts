@@ -1,16 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {Router}from '@angular/router'
+
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  styleUrls: ['./signup.component.css'],
 })
+
 export class SignupComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
   registerForm:any; 
+  goToPage(pagename:string):void{
+    this.router.navigate([`${pagename}`]);
+  }
   ngOnInit(): void {
+
     this.registerForm = new FormGroup({
       "name":new FormControl(null,[Validators.required,Validators.pattern('[a-zA-Z ]*')]),
       "emailId":new FormControl(null,[Validators.required,Validators.email]),
@@ -44,4 +51,5 @@ export class SignupComponent implements OnInit {
     return this.registerForm.get('emailId');
   }
 
+ 
 }

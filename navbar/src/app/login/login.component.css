@@ -79,6 +79,9 @@
     text-align: center;
     border-radius: 25px;
 }
+.error{
+    color: rgb(182, 3, 3);
+}
 
 
 .box h1{                                   /* sign up title*/
@@ -113,8 +116,7 @@
     background: rgba(128, 128, 128, 0.5);
 }
 
-
-.box input[type = "submit"]{                                 /*button styling*/   
+.btn{                                 /*button styling*/   
     border: 0;
     background: none;
     display: block;
@@ -132,7 +134,7 @@
 }
 
  
-.box input[type = "submit"]:hover{                        /*button styling hover*/
+.btn{                        /*button styling hover*/
     background: rgb(96, 46, 114);
 }
 
