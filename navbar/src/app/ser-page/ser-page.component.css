@@ -20,6 +20,8 @@ body{
     margin: 10px;
     border-radius: 15px;
 }
+
+
 .card-image{
    
     height: 170px;
@@ -73,82 +75,116 @@ body{
     color: #4E78f4;
 }
 .btn1:hover{
-   background-color: #fff;
+   background-color: rgb(96, 46, 114);
+   color: white;
+   border-color: rgb(88, 46, 103);
 }
 
 .btn2{
     color: #4E78f4;
 }
 .btn2:hover{
-   background-color: #fff;
+    background-color: rgb(96, 46, 114);
+    color: white;
+    border-color: rgb(88, 46, 103);
 }
 .btn3{
     color: #4E78f4;
 }
 .btn3:hover{
-   background-color: #fff;
+    background-color: rgb(96, 46, 114);
+    color: white;
+    border-color: rgb(88, 46, 103);
 }
 .btn4{
     color: #4E78f4;
 }
 .btn4:hover{
-   background-color: #fff;
+    background-color: rgb(96, 46, 114);
+    color: white;
+    border-color: rgb(88, 46, 103);
 }
 .btn5{
     color: #4E78f4;
 }
 .btn5:hover{
-   background-color: #fff;
+    background-color: rgb(96, 46, 114);
+    color: white;
+    border-color: rgb(88, 46, 103);
 }
 .btn6{
     color: #4E78f4;
     
 }
 .btn6:hover{
-   background-color: #fff;
+    background-color: rgb(96, 46, 114);
+    color: white;
+    border-color: rgb(88, 46, 103);
 }
 .btn7{
     color: #4E78f4;
 }
 .btn7:hover{
-   background-color: #fff;
+    background-color: rgb(96, 46, 114);
+    color: white;
+    border-color: rgb(88, 46, 103);
 }
 .btn8{
     color: #4E78f4;
 }
 .btn8:hover{
-   background-color: #fff;
+    background-color: rgb(96, 46, 114);
+    color: white;
+    border-color: rgb(88, 46, 103);
 }
 .btn9{
     color: #4E78f4;
 }
 .btn9:hover{
-   background-color: #fff;
+    background-color: rgb(96, 46, 114);
+    color: white;
+    border-color: rgb(88, 46, 103);
 }
 .btn10{
     color: #4E78f4;
 }
 .btn10:hover{
-   background-color: #fff;
+    background-color: rgb(96, 46, 114);
+    color: white;
+    border-color: rgb(88, 46, 103);
 }
 .btn11{
     color: #4E78f4;
 }
 .btn11:hover{
-   background-color: #fff;
+    background-color: rgb(96, 46, 114);
+    color: white;
+    border-color: rgb(88, 46, 103);
 }
 .btn12{
     color: #4E78f4;
 }
 .btn12:hover{
-   background-color: #fff;
+    background-color: rgb(96, 46, 114);
+    color: white;
+    border-color: rgb(88, 46, 103);
 }
 .card:hover{
-    background-color: #C280FF;
+    background-color: #8945c9;
     color: white;
     cursor: pointer;
     transform: scale(1.03);
     transition: all .3s ease;
+}
+
+h2 {
+    font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
+    letter-spacing: normal;
+    text-align: center;
+}
+
+p {
+    text-align: center;
 }
 
 footer {

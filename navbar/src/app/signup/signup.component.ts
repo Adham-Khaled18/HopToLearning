@@ -1,7 +1,23 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators  , AbstractControl , ValidationErrors ,ValidatorFn} from '@angular/forms';
 import {Router}from '@angular/router'
+import { HotToastService } from '@ngneat/hot-toast';
+import { AuthService } from '../services/auth.service';
 
+export function passwordMatchValidator(): ValidatorFn {
+  return (control: AbstractControl): ValidationErrors | null => {
+    const password = control.get('password')?.value;
+    const confirmPassword = control.get('confirmPassword')?.value;
+
+    if (password && confirmPassword && password !== confirmPassword) {
+      return{
+        passwordsDontMatch: true
+      }
+    }
+    return null;
+  };
+
+}
 
 @Component({
   selector: 'app-signup',
@@ -11,28 +27,32 @@ import {Router}from '@angular/router'
 
 export class SignupComponent implements OnInit {
 
-  constructor(private router:Router) { }
-  registerForm:any; 
+  registerForm = new FormGroup({
+    name: new FormControl('', Validators.required),
+    email: new FormControl('', [Validators.email, Validators.required]),
+    password: new FormControl('', Validators.required),
+    confirmPassword: new FormControl('', Validators.required)
+  }, {validators: passwordMatchValidator() })
+  constructor(private router:Router,private authService:AuthService,private toast: HotToastService) { }
+   
   goToPage(pagename:string):void{
     this.router.navigate([`${pagename}`]);
   }
   ngOnInit(): void {
-
-    this.registerForm = new FormGroup({
-      "name":new FormControl(null,[Validators.required,Validators.pattern('[a-zA-Z ]*')]),
-      "emailId":new FormControl(null,[Validators.required,Validators.email]),
-      "password":new FormControl(null,[Validators.required,Validators.minLength(8)]),
-      "passwordC":new FormControl(null,[Validators.required])
-    });
   }
    //submit function
   submitData(){
-    console.log(this.registerForm.value);
-
-    if(this.registerForm.valid){
-      alert(`Welcome ${this.registerForm.value.name} `);
-    }
-
+    if (!this.registerForm.valid)return;
+    const {name,email,password} = this.registerForm.value;
+    this.authService.signup(name, email,password).pipe(
+      this.toast.observe({
+        success: 'Signup successful!',
+        loading: 'Signing Up...',
+        error: ({message}) => `${message}`
+      })
+    ).subscribe(()=>{
+      this.router.navigate(['/Home'])
+    })
   }
 
   get name(){
@@ -43,12 +63,12 @@ export class SignupComponent implements OnInit {
     return this.registerForm.get('password');
   }
 
-  get passwordC(){
-    return this.registerForm.get('passwordC');
+  get confirmPassword(){
+    return this.registerForm.get('confirmPassword');
   }
 
-  get emailId(){
-    return this.registerForm.get('emailId');
+  get email(){
+    return this.registerForm.get('email');
   }
 
  

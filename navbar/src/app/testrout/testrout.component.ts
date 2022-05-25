@@ -1,6 +1,7 @@
 
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router} from '@angular/router';
+import { AuthService } from '../services/auth.service';
 @Component({
   selector: 'app-testrout',
   templateUrl: './testrout.component.html',
@@ -8,7 +9,7 @@ import { Router} from '@angular/router';
 })
 export class TestroutComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router ) { }
   goToPage(pagename: string): void {
     this.router.navigate([`${pagename}`]);
   }
